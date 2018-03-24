@@ -31,7 +31,7 @@ print(all_states.some_name, all_states.some_second_name) # some_info some_second
 ```python
 fsm_obj.set_expired('some_key', 3) # time in seconds
 ```
-* Let's see what happened
+* Let's see what happened:
 ```python
 import time
 
