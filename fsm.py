@@ -104,7 +104,7 @@ class FSM:
         :return:
         """
         self.expired_states[holder] = datetime.now() + timedelta(seconds=seconds)
-        
+
     def remove_expired(self, holder):
         if self.expired_states.get(holder):
             del self.expired_states[holder]
