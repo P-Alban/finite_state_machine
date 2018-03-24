@@ -1,12 +1,12 @@
 from datetime import timedelta, datetime
 
 
-class StateObject:
+class StateObject(object):
     def __init__(self, extra_states):
         self.extra_states = extra_states
 
     def __getattribute__(self, item):
-        states = object.__getattribute__(self, 'extra_states')
+        states = super().__getattribute__('extra_states')
         return states if item == 'extra_states' else states[item]
 
     def __str__(self):
