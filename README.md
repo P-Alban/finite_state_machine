@@ -2,6 +2,8 @@
 
 ### Create a FSM object with default state:
 ```python 
+from fsm import FSM
+
 fsm_obj = FSM(default='default_state')
 ```
 
