@@ -114,9 +114,7 @@ class FSM:
         """
         now = datetime.now()
         saved_time = self.expired_states.get(holder)
-        if not saved_time:
-            return False
-        if now >= saved_time:
-            del self.expired_states[holder]
+        if not saved_time or now >= saved_time:
+            self.remove_expired(holder)
             return False
         return saved_time - now
