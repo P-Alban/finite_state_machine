@@ -40,7 +40,7 @@ while True:
     time.sleep(1)
 ```
 * Output:
-```
+```python
 0:00:03
 0:00:02
 0:00:01
