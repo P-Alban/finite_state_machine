@@ -113,8 +113,10 @@ class FSM:
         :return: time or bool
         """
         now = datetime.now()
-        saved_time = self.expired_states[holder]
+        saved_time = self.expired_states.get(holder)
+        if not saved_time:
+            return False
         if now >= saved_time:
-            del self.extra_states[holder]
+            del self.expired_states[holder]
             return False
         return saved_time - now
