@@ -77,7 +77,7 @@ class FSM:
         :param holder: key
         :return:
         """
-        return self.states[holder]
+        return self.states.get(holder)
 
     def get_extra_state(self, holder, key):
         """
